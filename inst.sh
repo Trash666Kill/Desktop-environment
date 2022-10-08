@@ -1,4 +1,9 @@
 #!/bin/bash
+
+if [[ $EUID -ne 0 ]]; then
+   	echo "This script must be run as sudo"
+   	exit 1
+else
 #
 #Update and Upgrade
 echo "**UPDATING AND UPGRADING**"
@@ -36,7 +41,7 @@ rm -rv /home/emperor/.config
 tar -xvf home.tar.xz -C /home/emperor/ > /dev/null 2>&1
 chown emperor:emperor -R /home/emperor/
 chown emperor:emperor -R /usr/share/wallpapers/Spiral/
-#systemctl set-default multi-user.target
+systemctl set-default multi-user.target
 #Cleaning up
 echo "**CLEANING UP**"
 apt autoremove -y
