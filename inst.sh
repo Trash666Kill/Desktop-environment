@@ -5,7 +5,7 @@ if [[ $EUID -ne 0 ]]; then
    	exit 1
 else
 #
-cd /desktop-environment-main
+cd /Repository/desktop-environment-main
 #Update and Upgrade
 echo "**UPDATING AND UPGRADING**"
 apt update && apt upgrade -y
