@@ -24,7 +24,7 @@ apt install arc-theme nitrogen ffmpegthumbnailer -y
 echo "6"
 apt install gpicview evince galculator gnome-screenshot pluma alacarte -y
 echo "7"
-apt install compton caja qshutdown unrar -y
+apt install compton caja unrar -y
 echo "8"
 apt install firefox-esr caffeine engrampa gparted gnome-disk-utility baobab -y
 echo "9"
