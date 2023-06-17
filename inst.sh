@@ -13,19 +13,19 @@ apt update && apt upgrade -y
 echo "**INSTALLING THE DESKTOP ENVIRONMENT**"
 echo "1"
 apt install xorg -y
-echo "3"
+echo "2"
 apt install lightdm openbox obconf lxterminal lxpanel xscreensaver -y
-echo "4"
+echo "3"
 apt install lxtask lxsession-logout lxappearance lxrandr progress -y
-echo "5"
+echo "4"
 apt install arc-theme nitrogen ffmpegthumbnailer -y
-echo "6"
+echo "5"
 apt install gpicview evince galculator gnome-screenshot pluma alacarte -y
+echo "6"
+apt install compton caja unrar-free -y
 echo "7"
-apt install compton caja unrar -y
-echo "8"
 apt install firefox-esr caffeine engrampa gparted gnome-disk-utility baobab -y
-echo "9"
+echo "8"
 apt install virt-manager ssh-askpass -y
 #Conf DE
 echo "**SETTING UP THE DESKTOP ENVIRONMENT**"
@@ -35,6 +35,7 @@ tar -xvf 01-Qogir.tar.xz -C /usr/share/icons > /dev/null 2>&1
 tar -xvf Arc-Dark.tar.xz -C /usr/share/themes > /dev/null 2>&1
 cp -v lightdm-gtk-greeter.conf /etc/lightdm/
 cp -v explorer.desktop /usr/share/applications/
+cp -v debian-swirl.png /usr/share/icons/default/
 #Emperor
 rm -rv /home/emperor/.config
 tar -xvf home.tar.xz -C /home/emperor/ > /dev/null 2>&1
