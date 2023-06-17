@@ -12,13 +12,11 @@ apt update && apt upgrade -y
 #DE
 echo "**INSTALLING THE DESKTOP ENVIRONMENT**"
 echo "1"
-apt install xorg xserver-xorg-input-libinput xserver-xorg-input-evdev -y
-echo "2"
-apt install xserver-xorg-input-mouse xserver-xorg-input-synaptics -y
+apt install xorg -y
 echo "3"
-apt install lightdm openbox obconf lxterminal lxpanel xscreensaver lxhotkey-gtk -y
+apt install lightdm openbox obconf lxterminal lxpanel xscreensaver -y
 echo "4"
-apt install lxtask lxsession-logout lxappearance lxrandr xfce4-power-manager progress -y
+apt install lxtask lxsession-logout lxappearance lxrandr progress -y
 echo "5"
 apt install arc-theme nitrogen ffmpegthumbnailer -y
 echo "6"
@@ -46,8 +44,6 @@ systemctl set-default multi-user.target
 #Cleaning up
 echo "**CLEANING UP**"
 apt autoremove -y
-rm -v /home/emperor/.bash_history
-rm -v /root/.bash_history
 #End
 echo "End"
 #
