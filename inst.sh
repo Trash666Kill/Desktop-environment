@@ -35,10 +35,9 @@ tar -xvf Arc-Dark.tar.xz -C /usr/share/themes > /dev/null 2>&1
 cp -v lightdm-gtk-greeter.conf /etc/lightdm/
 cp -v explorer.desktop /usr/share/applications/
 #Emperor
-rm -rv /home/emperor/.config
-cp -rv config /home/emperor/.config > /dev/null 2>&1
+cp -rv config /home/emperor/.config
 chown emperor:emperor -R /home/emperor/.config
-chown emperor:emperor -R /usr/share/wallpapers/Spiral/
+chown emperor:emperor -R /usr/share/wallpapers/default.jpg
 systemctl set-default multi-user.target
 #Cleaning up
 echo "**CLEANING UP**"
