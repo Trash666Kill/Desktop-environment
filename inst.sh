@@ -30,12 +30,12 @@ apt install virt-manager ssh-askpass -y
 #Conf DE
 echo "**SETTING UP THE DESKTOP ENVIRONMENT**"
 rm -v /etc/lightdm/lightdm-gtk-greeter.conf
-cp -v wallpaper.jpg /usr/share/wallpapers/ > /dev/null 2>&1
+cp -v debian-swirl.png /usr/share/icons/default/
+cp -v wallpaper.jpg /usr/share/wallpapers/
 tar -xvf 01-Qogir.tar.xz -C /usr/share/icons > /dev/null 2>&1
 tar -xvf Arc-Dark.tar.xz -C /usr/share/themes > /dev/null 2>&1
 cp -v lightdm-gtk-greeter.conf /etc/lightdm/
 cp -v explorer.desktop /usr/share/applications/
-cp -v debian-swirl.png /usr/share/icons/default/
 #Emperor
 rm -rv /home/emperor/.config
 tar -xvf home.tar.xz -C /home/emperor/ > /dev/null 2>&1
