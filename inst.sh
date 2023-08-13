@@ -24,7 +24,7 @@ apt install gpicview evince galculator gnome-screenshot pluma alacarte -y
 echo "6"
 apt install compton caja unrar-free -y
 echo "7"
-apt install firefox-esr engrampa gparted gnome-disk-utility baobab -y
+apt install firefox-esr engrampa baobab -y
 echo "8"
 apt install virt-manager ssh-askpass -y
 #Conf DE
