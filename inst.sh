@@ -38,6 +38,7 @@ cp -v explorer.desktop /usr/share/applications/
 cp -v gtkrc-2.0 /home/emperor/.gtkrc-2.0
 cp -rv config /home/emperor/.config
 chown emperor:emperor -R /home/emperor/.config
+chown emperor:emperor -R /home/emperor/.gtkrc-2.0
 chown emperor:emperor -R /usr/share/wallpapers/default.jpg
 systemctl set-default multi-user.target
 #Cleaning up
