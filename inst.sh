@@ -20,7 +20,7 @@ apt install lxtask lxsession-logout progress -y
 echo "4"
 apt install arc-theme ffmpegthumbnailer -y
 echo "5"
-apt install gpicview galculator gnome-screenshot pluma alacarte -y
+apt install gpicview galculator gnome-screenshot pluma -y
 echo "6"
 apt install compton caja unrar feh -y
 echo "7"
