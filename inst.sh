@@ -31,7 +31,7 @@ apt install virt-manager ssh-askpass -y
 echo "**SETTING UP THE DESKTOP ENVIRONMENT**"
 rm -v /etc/lightdm/lightdm-gtk-greeter.conf
 cp -v debian-swirl.png /usr/share/icons/default/
-cp -v wallpaper.jpg /usr/share/wallpapers/
+cp -v default.jpg /usr/share/wallpapers/
 tar -xvf 01-Qogir.tar.xz -C /usr/share/icons > /dev/null 2>&1
 tar -xvf Arc-Dark.tar.xz -C /usr/share/themes > /dev/null 2>&1
 cp -v lightdm-gtk-greeter.conf /etc/lightdm/
