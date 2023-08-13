@@ -22,7 +22,7 @@ apt install arc-theme ffmpegthumbnailer -y
 echo "5"
 apt install gpicview evince galculator gnome-screenshot pluma alacarte -y
 echo "6"
-apt install compton caja unrar-free feh -y
+apt install compton caja unrar feh -y
 echo "7"
 apt install firefox-esr engrampa baobab -y
 #Conf DE
