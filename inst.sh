@@ -22,11 +22,9 @@ apt install arc-theme ffmpegthumbnailer -y
 echo "5"
 apt install gpicview evince galculator gnome-screenshot pluma alacarte -y
 echo "6"
-apt install compton caja unrar-free -y
+apt install compton caja unrar-free feh -y
 echo "7"
 apt install firefox-esr engrampa baobab -y
-echo "8"
-apt install virt-manager ssh-askpass -y
 #Conf DE
 echo "**SETTING UP THE DESKTOP ENVIRONMENT**"
 rm -v /etc/lightdm/lightdm-gtk-greeter.conf
