@@ -37,7 +37,7 @@ cp -v explorer.desktop /usr/share/applications/
 #Emperor
 rm -rv /home/emperor/.config
 cp -rv config /home/emperor/.config > /dev/null 2>&1
-chown emperor:emperor -R /home/emperor/
+chown emperor:emperor -R /home/emperor/.config
 chown emperor:emperor -R /usr/share/wallpapers/Spiral/
 systemctl set-default multi-user.target
 #Cleaning up
