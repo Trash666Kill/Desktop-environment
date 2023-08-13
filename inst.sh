@@ -16,11 +16,11 @@ apt install xorg -y
 echo "2"
 apt install lightdm openbox obconf lxterminal lxpanel -y
 echo "3"
-apt install lxtask lxsession-logout lxrandr progress -y
+apt install lxtask lxsession-logout progress -y
 echo "4"
 apt install arc-theme ffmpegthumbnailer -y
 echo "5"
-apt install gpicview evince galculator gnome-screenshot pluma alacarte -y
+apt install gpicview galculator gnome-screenshot pluma alacarte -y
 echo "6"
 apt install compton caja unrar feh -y
 echo "7"
