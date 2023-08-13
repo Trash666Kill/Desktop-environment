@@ -14,17 +14,17 @@ echo "**INSTALLING THE DESKTOP ENVIRONMENT**"
 echo "1"
 apt install xorg -y
 echo "2"
-apt install lightdm openbox obconf lxterminal lxpanel xscreensaver -y
+apt install lightdm openbox obconf lxterminal lxpanel -y
 echo "3"
 apt install lxtask lxsession-logout lxappearance lxrandr progress -y
 echo "4"
-apt install arc-theme nitrogen ffmpegthumbnailer -y
+apt install arc-theme ffmpegthumbnailer -y
 echo "5"
 apt install gpicview evince galculator gnome-screenshot pluma alacarte -y
 echo "6"
 apt install compton caja unrar-free -y
 echo "7"
-apt install firefox-esr caffeine engrampa gparted gnome-disk-utility baobab -y
+apt install firefox-esr engrampa gparted gnome-disk-utility baobab -y
 echo "8"
 apt install virt-manager ssh-askpass -y
 #Conf DE
