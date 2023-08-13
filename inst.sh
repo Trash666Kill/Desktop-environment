@@ -16,7 +16,7 @@ apt install xorg -y
 echo "2"
 apt install lightdm openbox obconf lxterminal lxpanel -y
 echo "3"
-apt install lxtask lxsession-logout lxappearance lxrandr progress -y
+apt install lxtask lxsession-logout lxrandr progress -y
 echo "4"
 apt install arc-theme ffmpegthumbnailer -y
 echo "5"
