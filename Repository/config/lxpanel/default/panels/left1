@@ -84,11 +84,6 @@ Plugin {
   }
 }
 Plugin {
-  type=volume
-  Config {
-  }
-}
-Plugin {
   type=space
   Config {
   }
