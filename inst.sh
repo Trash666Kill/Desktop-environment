@@ -35,8 +35,9 @@ tar -xvf Arc-Dark.tar.xz -C /usr/share/themes > /dev/null 2>&1
 cp -v lightdm-gtk-greeter.conf /etc/lightdm/
 cp -v explorer.desktop /usr/share/applications/
 #Emperor
+rm -r /home/emperor/.config
 cp -v gtkrc-2.0 /home/emperor/.gtkrc-2.0
-cp -rv config /home/emperor/.config > /dev/null 2>&1
+cp -r config /home/emperor/.config
 chown emperor:emperor -R /home/emperor/.config
 chown emperor:emperor /home/emperor/.gtkrc-2.0
 chown emperor:emperor /usr/share/wallpapers/default.jpg
