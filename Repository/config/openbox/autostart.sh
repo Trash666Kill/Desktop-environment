@@ -6,9 +6,7 @@
 feh --bg-fill /usr/share/wallpapers/default.jpg &
 # Always on
 xset -dpms &
-xset s noblank &
 xset s off &
-xset dpms force on &
 #
 lxpanel &
 #virt-manager &
