@@ -14,7 +14,7 @@ echo "**INSTALLING THE DESKTOP ENVIRONMENT**"
 echo "1"
 apt install xorg -y
 echo "2"
-apt install lightdm openbox -y
+apt install openbox -y
 echo "3"
 echo "6"
 apt install feh -y
