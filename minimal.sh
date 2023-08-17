@@ -14,17 +14,11 @@ echo "**INSTALLING THE DESKTOP ENVIRONMENT**"
 echo "1"
 apt install xorg -y
 echo "2"
-apt install lightdm openbox obconf lxterminal lxpanel -y
+apt install lightdm openbox -y
 echo "3"
-apt install lxtask lxsession-logout progress -y
-echo "4"
-apt install arc-theme ffmpegthumbnailer -y
-echo "5"
-apt install gpicview gnome-screenshot -y
 echo "6"
-apt install compton caja unrar feh -y
+apt install feh -y
 echo "7"
-apt install firefox-esr engrampa baobab -y
 #Conf DE
 echo "**SETTING UP THE DESKTOP ENVIRONMENT**"
 rm -v /etc/lightdm/lightdm-gtk-greeter.conf
