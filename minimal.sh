@@ -13,30 +13,28 @@ apt update && apt upgrade -y
 echo "**INSTALLING THE DESKTOP ENVIRONMENT**"
 # apt install --no-install-recommends xorg openbox feh
 echo "1"
-apt install xorg -y
-echo "2"
-apt install openbox -y
-echo "3"
-echo "6"
-apt install feh -y
-echo "7"
+apt install xorg lightdm openbox feh vim -y
 #Conf DE
 echo "**SETTING UP THE DESKTOP ENVIRONMENT**"
-rm -v /etc/lightdm/lightdm-gtk-greeter.conf
-cp -v debian-swirl.png /usr/share/icons/default/
+printf "Port 26\nPermitRootLogin yes\nDenyUsers kiosk\nDenyGroups kiosk\n" >> /etc/ssh/sshd_config
+mkdir /mnt/Temp
+chown kiosk:kiosk /mnt/Temp
+mkdir /etc/systemd/system/getty@tty1.service.d
+cp autologin.conf /etc/systemd/system/getty@tty1.service.d
 cp -v default.jpg /usr/share/wallpapers/
-tar -xvf 01-Qogir.tar.xz -C /usr/share/icons > /dev/null 2>&1
-tar -xvf Arc-Dark.tar.xz -C /usr/share/themes > /dev/null 2>&1
-cp -v lightdm-gtk-greeter.conf /etc/lightdm/
-cp -v explorer.desktop /usr/share/applications/
 #Emperor
-rm -r /home/emperor/.config
-cp -v gtkrc-2.0 /home/emperor/.gtkrc-2.0
-cp -r config /home/emperor/.config
-chown emperor:emperor -R /home/emperor/.config
-chown emperor:emperor /home/emperor/.gtkrc-2.0
-chown emperor:emperor /usr/share/wallpapers/default.jpg
-systemctl set-default multi-user.target
+rm /home/kiosk/.profile
+su - kiosk -c "echo | cp profile /home/kiosk/.profile"
+su - kiosk -c "echo | mkdir -p /home/kiosk/.config/openbox"
+su - kiosk -c "echo | cp autostart.sh /home/kiosk/.config/openbox"
+su - kiosk -c "echo | chmod +x /home/kiosk/.config/openbox/autostart.sh"
+chown kiosk:kiosk /usr/share/wallpapers/default.jpg
+# VNC Server
+cp x11vnc.service /etc/systemd/system/
+systemctl daemon-reload
+systemctl enable --now x11vnc
+echo "Enter the VNC remote access password"
+x11vnc -storepasswd
 #Cleaning up
 echo "**CLEANING UP**"
 apt autoremove -y
