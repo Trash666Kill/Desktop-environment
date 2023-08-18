@@ -16,9 +16,6 @@ echo "1"
 apt install xorg lightdm openbox feh vim -y
 #Conf DE
 echo "**SETTING UP THE DESKTOP ENVIRONMENT**"
-printf "Port 26\nPermitRootLogin yes\nDenyUsers kiosk\nDenyGroups kiosk\n" >> /etc/ssh/sshd_config
-mkdir /mnt/Temp
-chown kiosk:kiosk /mnt/Temp
 mkdir /etc/systemd/system/getty@tty1.service.d
 cp autologin.conf /etc/systemd/system/getty@tty1.service.d
 cp -v default.jpg /usr/share/wallpapers/
@@ -28,6 +25,7 @@ su - kiosk -c "echo | cp profile /home/emperor/.profile"
 su - kiosk -c "echo | mkdir -p /home/emperor/.config/openbox"
 su - kiosk -c "echo | cp autostart.sh /home/emperor/.config/openbox"
 su - kiosk -c "echo | chmod +x /home/emperor/.config/openbox/autostart.sh"
+su - kiosk -c "echo | mkdir -p /home/emperor/Temp"
 chown emperor:emperor /usr/share/wallpapers/default.jpg
 #Cleaning up
 echo "**CLEANING UP**"
