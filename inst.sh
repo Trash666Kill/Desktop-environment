@@ -20,12 +20,12 @@ mkdir /etc/systemd/system/getty@tty1.service.d
 cp autologin.conf /etc/systemd/system/getty@tty1.service.d
 cp -v default.jpg /usr/share/wallpapers/
 #Emperor
-rm /home/kiosk/.profile
-su - kiosk -c "echo | cp profile /home/emperor/.profile"
-su - kiosk -c "echo | mkdir -p /home/emperor/.config/openbox"
-su - kiosk -c "echo | cp autostart.sh /home/emperor/.config/openbox"
-su - kiosk -c "echo | chmod +x /home/emperor/.config/openbox/autostart.sh"
-su - kiosk -c "echo | mkdir -p /home/emperor/Temp"
+rm /home/emperor/.profile
+su - emperor -c "echo | cp profile /home/emperor/.profile"
+su - emperor -c "echo | mkdir -p /home/emperor/.config/openbox"
+su - emperor -c "echo | cp autostart.sh /home/emperor/.config/openbox"
+su - emperor -c "echo | chmod +x /home/emperor/.config/openbox/autostart.sh"
+su - emperor -c "echo | mkdir -p /home/emperor/Temp"
 chown emperor:emperor /usr/share/wallpapers/default.jpg
 #Cleaning up
 echo "**CLEANING UP**"
