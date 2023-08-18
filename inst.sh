@@ -17,7 +17,6 @@ apt install --no-install-recommends xorg openbox -y
 echo "**SETTING UP THE DESKTOP ENVIRONMENT**"
 mkdir /etc/systemd/system/getty@tty1.service.d
 cp autologin.conf /etc/systemd/system/getty@tty1.service.d
-cp -v default.jpg /usr/share/wallpapers/
 #Emperor
 rm /home/emperor/.profile
 su - emperor -c "echo | cp profile /home/emperor/.profile"
