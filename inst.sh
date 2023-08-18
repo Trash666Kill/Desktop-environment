@@ -23,7 +23,6 @@ su - emperor -c "echo | cp profile /home/emperor/.profile"
 su - emperor -c "echo | mkdir -p /home/emperor/.config/openbox"
 su - emperor -c "echo | cp autostart.sh /home/emperor/.config/openbox"
 su - emperor -c "echo | chmod +x /home/emperor/.config/openbox/autostart.sh"
-su - emperor -c "echo | mkdir -p /home/emperor/Temp"
 #Cleaning up
 echo "**CLEANING UP**"
 apt autoremove -y
