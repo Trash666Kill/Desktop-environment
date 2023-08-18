@@ -19,10 +19,11 @@ mkdir /etc/systemd/system/getty@tty1.service.d
 cp autologin.conf /etc/systemd/system/getty@tty1.service.d
 #Emperor
 rm /home/emperor/.profile
-su - emperor -c "echo | cp profile /home/emperor/.profile"
-su - emperor -c "echo | mkdir -p /home/emperor/.config/openbox"
-su - emperor -c "echo | cp autostart.sh /home/emperor/.config/openbox"
-su - emperor -c "echo | chmod +x /home/emperor/.config/openbox/autostart.sh"
+cp profile /home/emperor/.profile
+mkdir -p /home/emperor/.config/openbox
+cp autostart.sh /home/emperor/.config/openbox
+chmod +x /home/emperor/.config/openbox/autostart.sh
+chown emperor:emperor /home/emperor/.config/openbox/autostart.sh
 #Cleaning up
 echo "**CLEANING UP**"
 apt autoremove -y
