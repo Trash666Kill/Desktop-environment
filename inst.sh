@@ -11,9 +11,8 @@ echo "**UPDATING AND UPGRADING**"
 apt update && apt upgrade -y
 #DE
 echo "**INSTALLING THE DESKTOP ENVIRONMENT**"
-# apt install --no-install-recommends xorg openbox feh
 echo "1"
-apt install xorg lightdm openbox feh vim -y
+apt install --no-install-recommends xorg openbox feh vim -y
 #Conf DE
 echo "**SETTING UP THE DESKTOP ENVIRONMENT**"
 mkdir /etc/systemd/system/getty@tty1.service.d
