@@ -20,6 +20,7 @@ cp autologin.conf /etc/systemd/system/getty@tty1.service.d
 #Emperor
 rm /home/emperor/.profile
 cp profile /home/emperor/.profile
+chown emperor:emperor /home/emperor/.profile
 su - emperor -c "mkdir -p /home/emperor/.config/openbox"
 cp autostart.sh /home/emperor/.config/openbox
 chmod +x /home/emperor/.config/openbox/autostart.sh
