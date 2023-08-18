@@ -24,17 +24,11 @@ cp autologin.conf /etc/systemd/system/getty@tty1.service.d
 cp -v default.jpg /usr/share/wallpapers/
 #Emperor
 rm /home/kiosk/.profile
-su - kiosk -c "echo | cp profile /home/kiosk/.profile"
-su - kiosk -c "echo | mkdir -p /home/kiosk/.config/openbox"
-su - kiosk -c "echo | cp autostart.sh /home/kiosk/.config/openbox"
-su - kiosk -c "echo | chmod +x /home/kiosk/.config/openbox/autostart.sh"
-chown kiosk:kiosk /usr/share/wallpapers/default.jpg
-# VNC Server
-cp x11vnc.service /etc/systemd/system/
-systemctl daemon-reload
-systemctl enable --now x11vnc
-echo "Enter the VNC remote access password"
-x11vnc -storepasswd
+su - kiosk -c "echo | cp profile /home/emperor/.profile"
+su - kiosk -c "echo | mkdir -p /home/emperor/.config/openbox"
+su - kiosk -c "echo | cp autostart.sh /home/emperor/.config/openbox"
+su - kiosk -c "echo | chmod +x /home/emperor/.config/openbox/autostart.sh"
+chown emperor:emperor /usr/share/wallpapers/default.jpg
 #Cleaning up
 echo "**CLEANING UP**"
 apt autoremove -y
