@@ -12,7 +12,7 @@ apt update && apt upgrade -y
 #DE
 echo "**INSTALLING THE DESKTOP ENVIRONMENT**"
 echo "1"
-apt install --no-install-recommends xorg openbox feh vim -y
+apt install --no-install-recommends xorg openbox vim -y
 #Conf DE
 echo "**SETTING UP THE DESKTOP ENVIRONMENT**"
 mkdir /etc/systemd/system/getty@tty1.service.d
