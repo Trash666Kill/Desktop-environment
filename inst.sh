@@ -15,14 +15,14 @@ echo "1"
 apt install --no-install-recommends xorg openbox -y
 #Conf DE
 echo "**SETTING UP THE DESKTOP ENVIRONMENT**"
-mkdir /etc/systemd/system/getty@tty1.service.d
-cp autologin.conf /etc/systemd/system/getty@tty1.service.d
+mkdir -v /etc/systemd/system/getty@tty1.service.d
+cp -v autologin.conf /etc/systemd/system/getty@tty1.service.d
 #Emperor
-rm /home/emperor/.profile
-cp profile /home/emperor/.profile
+rm -v /home/emperor/.profile
+cp -v profile /home/emperor/.profile
 chown emperor:emperor /home/emperor/.profile
-su - emperor -c "mkdir -p /home/emperor/.config/openbox"
-cp autostart.sh /home/emperor/.config/openbox
+su - emperor -c "mkdir -pv /home/emperor/.config/openbox"
+cp -v autostart.sh /home/emperor/.config/openbox
 chmod +x /home/emperor/.config/openbox/autostart.sh
 chown emperor:emperor /home/emperor/.config/openbox/autostart.sh
 #Cleaning up
